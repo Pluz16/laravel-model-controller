@@ -7,5 +7,10 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    //
+    public function homepage()
+{
+    $movies = \App\Models\Movie::all();
+    return view('homepage', compact('movies'));
+}
+
 }
